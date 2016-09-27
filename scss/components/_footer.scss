@@ -1,4 +1,23 @@
 footer {
   background-color: #587B99;
   min-height: 150px;
+  clear: both;
+  overflow: hidden;
+  .contact-info{
+    width: 300px;
+    float: left;
+    font-size: 20px;
+    padding: 20px 5px;
+    line-height: 24px;
+    color: #fff;
+    h3{
+      font-size: 26px;
+      line-height: 50px;
+      text-decoration: underline;
+    }
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
 }

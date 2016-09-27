@@ -5,18 +5,14 @@
  * Date: 27.09.2016
  * Time: 23:16
  */
-// Creating the widget
 class header_images_widget extends WP_Widget {
 
     function __construct() {
         parent::__construct(
-// Base ID of your widget
             'images_widget',
 
-// Widget name will appear in UI
             __('Header Images Widget', 'neohesh'),
 
-// Widget description
             array( 'description' => __( 'Header Images Widget', 'neohesh' ), )
         );
         add_action( 'admin_enqueue_scripts', array( $this, 'mfc_assets' ) );
@@ -27,8 +23,6 @@ class header_images_widget extends WP_Widget {
      wp_enqueue_script('mfc-media-upload', get_stylesheet_directory_uri().'/js/media-upload.js', array( 'jquery' )) ;
      wp_enqueue_style('thickbox');
  }
-// Creating widget front-end
-// This is where the action happens
     public function widget( $args, $instance ) {
         $format_image = '<div style="background-image: url(\'%s\')"></div>';
         echo $args['before_widget'];
@@ -51,17 +45,8 @@ class header_images_widget extends WP_Widget {
         }
 
         echo $args['after_widget'];
-
-
-
-
-
-
-
-
     }
 
-// Widget Backend
     public function form( $instance ) {
         $title = '';
         if( !empty( $instance['title'] ) ) {
@@ -115,7 +100,6 @@ class header_images_widget extends WP_Widget {
         <?php
     }
 
-// Updating widget replacing old instances with new
     public function update( $new_instance, $old_instance ) {
         $instance = array();
         $instance['image_1'] = ( ! empty( $new_instance['image_1'] ) ) ? strip_tags( $new_instance['image_1'] ) : '';
@@ -124,9 +108,8 @@ class header_images_widget extends WP_Widget {
         $instance['image_4'] = ( ! empty( $new_instance['image_4'] ) ) ? strip_tags( $new_instance['image_4'] ) : '';
         return $instance;
     }
-} // Class wpb_widget ends here
+}
 
-// Register and load the widget
 function wpb_load_widget() {
     register_widget( 'header_images_widget' );
 }
