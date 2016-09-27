@@ -6,18 +6,18 @@
  * Time: 23:16
  */
 // Creating the widget
-class wpb_widget extends WP_Widget {
+class header_images_widget extends WP_Widget {
 
     function __construct() {
         parent::__construct(
 // Base ID of your widget
-            'wpb_widget',
+            'images_widget',
 
 // Widget name will appear in UI
-            __('WPBeginner Widget', 'wpb_widget_domain'),
+            __('Header Images Widget', 'neohesh'),
 
 // Widget description
-            array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), )
+            array( 'description' => __( 'Header Images Widget', 'neohesh' ), )
         );
         add_action( 'admin_enqueue_scripts', array( $this, 'mfc_assets' ) );
     }
@@ -128,6 +128,6 @@ class wpb_widget extends WP_Widget {
 
 // Register and load the widget
 function wpb_load_widget() {
-    register_widget( 'wpb_widget' );
+    register_widget( 'header_images_widget' );
 }
 add_action( 'widgets_init', 'wpb_load_widget' );
