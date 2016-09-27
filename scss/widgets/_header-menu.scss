@@ -1,0 +1,40 @@
+.navbar-default {
+  background-color: #D7D7D7;
+  border-color: #e7e7e7;
+  margin-bottom: 0;
+
+  .header-menu {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    ul{
+      width:100%;
+      display: table;
+      li{
+        display: table-cell;
+        &:hover{
+          background-color: #fff;
+
+        }
+        a{
+
+          padding: 12px 60px;
+          color: #000;
+          text-decoration: none;
+          display: block;
+          //transition: all 0.1s ease;
+          &:hover{
+            background-color: #fff;
+            border-top: 14px solid white;
+            margin-top: -14px;
+          }
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      width: 1170px;
+    }
+  }
+
+}

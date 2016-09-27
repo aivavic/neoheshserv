@@ -1,0 +1,14 @@
+.content {
+  padding: 30px 0;
+  h2 {
+    font-weight: bold;
+    font-size: 30px;
+    background: linear-gradient(#5E80A6, #1B3B74); /* подробнее про градиенты */
+    -webkit-background-clip: text; /* подробнее про background-clip */
+    color: transparent;
+
+  }
+  p{
+    font-size:20px;
+  }
+}
