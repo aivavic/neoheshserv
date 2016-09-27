@@ -5,6 +5,8 @@
  * Date: 12.09.2016
  * Time: 23:53
  */
+?>
+<meta name="viewport" content="initial-scale=1.0"><?php
 wp_head();
 ?>
 <header>
