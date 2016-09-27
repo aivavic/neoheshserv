@@ -23,21 +23,12 @@
         var map;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
+                center: {lat: 46.932979, lng: 31.8679122},
                 zoom: 8
             });
         }
 
-    </script><style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        #map {
-            height: 100%;
-        }
-    </style>
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpkXV_M1XWJOk0Lywy9oVqaGvrx9mxQvg&callback=initMap"
             async defer></script>
 </footer>
