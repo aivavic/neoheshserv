@@ -1,6 +1,9 @@
 body {
   margin: 0; }
 
+img {
+  max-width: 100%; }
+
 header {
   width: 100%;
   min-height: 150px;
@@ -12,6 +15,29 @@ header {
     background-color: #D7D7D7;
     border-color: #e7e7e7;
     margin-bottom: 0; }
+    header .navbar-default .header-menu {
+      width: 900px;
+      margin: 0 auto;
+      position: relative;
+      text-align: center; }
+    header .navbar-default .header-menu ul {
+      width: 100%; }
+      header .navbar-default .header-menu ul li {
+        display: inline-block; }
+        header .navbar-default .header-menu ul li:hover {
+          background-color: #fff;
+          border-top: 14px solid white;
+          margin-top: -14px; }
+        header .navbar-default .header-menu ul li a {
+          padding: 12px 60px;
+          color: #000;
+          text-decoration: none;
+          display: block; }
+          header .navbar-default .header-menu ul li a:hover {
+            background-color: #fff; }
+    @media (min-width: 1200px) {
+      header .navbar-default .header-menu {
+        width: 1170px; } }
 
 footer {
   background-color: #587B99;
