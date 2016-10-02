@@ -11,8 +11,8 @@ add_action('wp_print_styles', 'add_stylesheet');
 function add_stylesheet() {
 
 
-    $StyleUrl = get_stylesheet_directory_uri() . '/scss/index.css';
-    $StyleFile = get_stylesheet_directory() . '/scss/index.css';
+    $StyleUrl = get_stylesheet_directory_uri() . '/css/index.css';
+    $StyleFile = get_stylesheet_directory() . '/css/index.css';
 
     if ( file_exists($StyleFile) ) {
         wp_register_style('StyleSheets', $StyleUrl);
