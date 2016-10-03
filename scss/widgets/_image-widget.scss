@@ -1,17 +1,26 @@
-.image-widget{
-  float: left;
-text-align: right;
-  div {
-    display: inline-block;
-    width: 180px;
-    height: 114px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: 10px;
-  }
-  @media (min-width: 1200px) {
-
-    width: 905px;
-  }
+.image-widget {
+	float: left;
+	text-align: right;
+	width: 60%;
+	min-height: 113px;
+	@extend .flex;
+	@include breakpoint(extra-small ) {
+		width: 100%;
+	}
+	div {
+		width: 21%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include breakpoint(extra-small ) {
+			width: 45%;
+			height: 200px;
+			margin: 0;
+			margin: 10px;
+		}
+		@include breakpoint(mobile) {
+			width: 90%;
+			margin: 0;
+			margin: 10px auto;
+		}
+	}
 }

@@ -18,6 +18,7 @@ function add_stylesheet() {
         wp_register_style('StyleSheets', $StyleUrl);
         wp_enqueue_style( 'StyleSheets');
     }
+    wp_enqueue_script('jquery-2.1.1', get_template_directory_uri() . '/js/jquery-2.1.1.js');
 
 
 }

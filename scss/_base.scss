@@ -1,13 +1,40 @@
-
+.clear-fix{
+	&::after {
+		content:"";
+		display: table;
+		clear: both;
+	}
+}
+.container {
+	&::after {
+		@extend .clear-fix;
+	}
+}
+.flex {
+	@include flexbox((
+		display: flex,
+		flex-direction: row,
+		flex-wrap: wrap,
+		justify-content: space-between,
+		align-items: stretch
+		));
+}
+:focus {
+	outline: none;
+}
 body {
-  margin: 0;
+	margin: 0;
 }
 img{
-  max-width: 100%;
+	max-width: 100%;
 }
 .container{
-  margin:0 auto;
-  @media (min-width: 1200px) {
-    width: 1170px;
-  }
+	margin: 0 auto;
+	@media (min-width: 1200px) {
+		width: 1170px;
+		padding-right: 15px;
+	}
+}
+p {
+	padding: 5px 15px;
 }

@@ -12,7 +12,7 @@
 <?php wp_head(); ?>
 <header>
 	<div class="container">
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="logo" id="logo">
+		<div class="logo-image"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-min.png" alt="logo" id="logo"></div>
 		<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 			<?php dynamic_sidebar( 'sidebar-1' ); ?>
 			<!-- .widget-area -->
@@ -20,15 +20,15 @@
 	</div>
 
 </header>
-<nav class="navbar navbar-default">
+	<nav>
+<div class="container">
 
-	<?php
-	wp_nav_menu(array('theme_location' => 'header-menu',
-		'container_class' => 'header-menu',
-		'items_wrap' => '<ul id="%1$s" class="nav navbar-nav">%3$s</ul>',
-		));
-		?>
+		<a href="#" class="toggle-menu" is-expanded="false">Menu</a>
+		<?php
+		wp_nav_menu(array(
+			'theme_location' => 'header-menu'
+			));
+			?>
 
 	</div>
-
-</nav>
+		</nav>

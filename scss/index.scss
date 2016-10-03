@@ -1,10 +1,9 @@
+@import "compass";
+@import "mixins/_breakpoint";
 @import "reset";
-
 @import "base";
 @import "components/header";
 @import "widgets/header-menu";
 @import "widgets/image-widget";
-
 @import "components/content";
-
 @import "components/footer";
